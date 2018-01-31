@@ -20,3 +20,8 @@ section.new-tweet h2 {
   border-bottom: 1px solid black;
   margin-top: 2px;
 }
+
+/* Adds red color to counter if is negative */
+.err {
+  color: red;
+}
