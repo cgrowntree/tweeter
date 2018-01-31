@@ -1,5 +1,5 @@
 article.tweet {
-  margin: 2em 2em;
+  margin: 2em;
   background-color: rgb(255, 255, 255);
   border: 1px solid #D0D0D0;
   border-radius: 5px;
@@ -10,16 +10,11 @@ article.tweet:hover {
   opacity: 1;
 }
 
-/* .clearfix::after{
-  content: "";
-  display: table;
-  clear: both;
-} */
-
 article.tweet header {
   background-color: #eee;
   width: 100%;
   overflow: auto;
+  border-radius: 4px 4px 0 0;
 }
 
 article.tweet .profile {
@@ -56,14 +51,15 @@ article.tweet .post-date {
   float: left;
 }
 
-article.tweet:hover .social-icon {
-  display: inline-block;
+article.tweet:hover i {
+  visibility: visible;
 }
 
-article.tweet .social-icon {
+article.tweet i {
+  color: rgb(121, 192, 184);
   float: right;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   padding: 5px;
-  display: none;
+  visibility: hidden;
 }
