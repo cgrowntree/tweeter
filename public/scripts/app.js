@@ -82,6 +82,19 @@ function createTweetElement(tweet) {
   return $tweet;
 }
 
+//Event handler
+$('#tweetForm').on('submit', function(event) {
+  //prevent default behaviour
+  event.preventDefault();
+  //get data from the form
+  var data = $('#tweetForm').serialize();
+  //submit using ajax
+  $.post('/tweets', data).done(function() {
+    //render tweets
+    renderTweets(data);
+  })
+});
+
 renderTweets(data);
 
 });
