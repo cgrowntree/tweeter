@@ -55,6 +55,7 @@ $(document).ready(function() {
     $.post('/tweets', data).done(function() {
       //render tweets
       loadTweets();
+      $('textarea').val('');
     })
     }
   });
