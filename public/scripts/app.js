@@ -28,16 +28,16 @@ function loadTweets() {
 }
 
 function renderTweets(tweets) {
+  $('.tweetSection').empty();
   // loops through tweets
   tweets.forEach(function(tweet) {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    $('.container').append(createTweetElement(tweet));
-  })
+    $('.tweetSection').prepend(createTweetElement(tweet));
+  });
 };
 
 $(document).ready(function() {
-
   //Event handler
   $('#tweetForm').on('submit', function(event) {
     //prevent default behaviour
@@ -58,7 +58,9 @@ $(document).ready(function() {
     })
     }
   });
-
+  
+  let $tweetSection = $('<section>').addClass('tweetSection');
+  $('.container').append($tweetSection);
   loadTweets();
 
 });
