@@ -42,6 +42,13 @@ $(document).ready(function() {
   $('#tweetForm').on('submit', function(event) {
     //prevent default behaviour
     event.preventDefault();
+    //check if test input box is empty or has more than 140 chars
+    const tweetForm = $('#tweetInput');
+    if (tweetForm.val().length === 0) {
+      alert("You can't tweet nothing");
+    } else if (tweetForm.val().length > 140) {
+      alert("You wrote more than 140 characters. Plesse write less.");
+    } else {
     //get data from the form
     var data = $('#tweetForm').serialize();
     //submit using ajax
@@ -49,6 +56,7 @@ $(document).ready(function() {
       //render tweets
       loadTweets();
     })
+    }
   });
 
   loadTweets();
