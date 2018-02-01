@@ -4,6 +4,7 @@ section.new-tweet {
   border: 1px solid #D0D0D0;
   border-radius: 5px;
   padding: 10px;
+  display: none;
 }
 
 section.new-tweet textarea {
@@ -19,6 +20,10 @@ section span.counter {
 section.new-tweet h2 {
   border-bottom: 1px solid black;
   margin-top: 2px;
+}
+
+section.new-tweet input {
+  cursor: pointer;
 }
 
 /* Adds red color to counter if is negative */

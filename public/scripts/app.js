@@ -64,3 +64,11 @@ $(document).ready(function() {
   loadTweets();
 
 });
+
+//on button press toggle the compose tweet section and select textarea
+$(document).ready(function() {
+  $('.compose').on('click', () => {
+    $('.new-tweet').slideToggle(250);
+    $('#tweetInput').focus().select();
+  });
+});
