@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 This project allowed me to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, and my Node, Express and MongoDB back-end skills.
 
-##Screenshots
+## Screenshots
 !["Screenshot of tweeter tweets"](https://github.com/cgrowntree/tweeter/blob/master/docs/tweets.png?raw=true)
 !["Screenshot of tweeter tweet box"](https://github.com/cgrowntree/tweeter/blob/master/docs/tweet-box.png?raw=true)
 
