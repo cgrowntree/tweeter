@@ -4,6 +4,7 @@ article.tweet {
   border: 1px solid #D0D0D0;
   border-radius: 5px;
   opacity: 0.7;
+  overflow: hidden;
 }
 
 article.tweet:hover {
@@ -14,8 +15,7 @@ article.tweet:hover {
 article.tweet header {
   background-color: #eee;
   width: 100%;
-  overflow: auto;
-  border-radius: 4px 4px 0 0;
+  overflow: hidden;
 }
 
 article.tweet .profile {

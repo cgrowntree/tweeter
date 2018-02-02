@@ -1,21 +1,17 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
+//jquery for tweets
 function createTweetElement(tweet) {
-  let $tweet = $("<article>").addClass("tweet");
-  let $header = $("<header>");
-  let $avatars = $("<img>").addClass("profile").attr("src", tweet.user.avatars.small);
-  let $name = $("<h2>").text(tweet.user.name);
-  let $handle = $("<span>").addClass("handle").text(tweet.user.handle);
-  let $body = $("<div>").append($("<p>").text(tweet.content.text));
-  let $footer = $("<footer>");
-  let $created_at = $("<span>").addClass("post-date").text(moment(tweet.created_at).startOf("hour").fromNow());
-  let $icon1 = $("<i>").addClass("fa fa-heart");
-  let $icon2 = $("<i>").addClass("fa fa-retweet");
-  let $icon3 = $("<i>").addClass("fa fa-flag");
+  const $tweet = $("<article>").addClass("tweet");
+  const $header = $("<header>");
+  const $avatars = $("<img>").addClass("profile").attr("src", tweet.user.avatars.small);
+  const $name = $("<h2>").text(tweet.user.name);
+  const $handle = $("<span>").addClass("handle").text(tweet.user.handle);
+  const $body = $("<div>").append($("<p>").text(tweet.content.text));
+  const $footer = $("<footer>");
+  const $created_at = $("<span>").addClass("post-date").text(moment(tweet.created_at).startOf("hour").fromNow());
+  const $icon1 = $("<i>").addClass("fa fa-heart");
+  const $icon2 = $("<i>").addClass("fa fa-retweet");
+  const $icon3 = $("<i>").addClass("fa fa-flag");
+
   $($header).append($avatars, $name, $handle);
   $($footer).append($created_at, $icon1, $icon2, $icon3, $footer);
   $($tweet).append($header, $body, $footer);
@@ -50,7 +46,7 @@ $(document).ready(function() {
       alert("You wrote more than 140 characters. Plesse write less.");
     } else {
     //get data from the form
-      var data = $("#tweetForm").serialize();
+      const data = $("#tweetForm").serialize();
       //submit using ajax
       $.post("/tweets", data).done(function() {
       //render tweets
@@ -65,7 +61,7 @@ $(document).ready(function() {
     }
   });
 
-  let $tweetSection = $("<section>").addClass("tweetSection");
+  const $tweetSection = $("<section>").addClass("tweetSection");
   $(".container").append($tweetSection);
   loadTweets();
 
