@@ -7,21 +7,18 @@ const simulateDelay = require("./util/simulate-delay");
 module.exports = function makeDataHelpers(db) {
   return {
 
-    // Saves a tweet to `db`
-    saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
+      // Saves a tweet to `mongodb`
+      saveTweet: function(newTweet, callback) {
+        db.collection("tweets").insertOne(newTweet);
         callback(null, true);
-      });
-    },
+      },
 
-    // Get all tweets in `db`, sorted by newest first
-    getTweets: function(callback) {
-      simulateDelay(() => {
+      // Get all tweets in `mongodb`, sorted by newest first
+      getTweets: function(callback) {
+        db.collection("tweets").find().toArray((err, results) => {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        callback(null, db.tweets.sort(sortNewestFirst));
+        callback(null, results.sort(sortNewestFirst));
       });
     }
-
-  };
-}
+  }
+};

@@ -55,6 +55,7 @@ $(document).ready(function() {
     $.post('/tweets', data).done(function() {
       //render tweets
       loadTweets();
+      //clear the text box on post
       $('textarea').val('');
     })
     }
