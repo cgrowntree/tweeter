@@ -23,6 +23,10 @@
   padding-left: 10px;
 }
 
+#nav-bar .header:hover {
+  cursor: default;
+}
+
 #nav-bar section.compose:hover {
   background: white;
   cursor: pointer;
@@ -44,6 +48,6 @@
 }
 
 #nav-bar section.compose h3 {
-  margin: 13px;
+  margin: 13px 4px;
   font-weight: 300;
 }

@@ -17,9 +17,17 @@ section span.counter {
   font-style: italic;
 }
 
+section span.counter:hover {
+  cursor: default;
+}
+
 section.new-tweet h2 {
   border-bottom: 1px solid black;
   margin-top: 2px;
+}
+
+section.new-tweet h2:hover {
+  cursor: default;
 }
 
 section.new-tweet input {

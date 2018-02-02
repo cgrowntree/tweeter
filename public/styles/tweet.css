@@ -1,13 +1,14 @@
 article.tweet {
-  margin: 2em;
+  margin: 1em 2em;
   background-color: rgb(255, 255, 255);
   border: 1px solid #D0D0D0;
   border-radius: 5px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 article.tweet:hover {
   opacity: 1;
+  border-color: rgb(101, 101, 101)
 }
 
 article.tweet header {
@@ -34,6 +35,7 @@ article.tweet h2 {
 article span.handle {
   float: right;
   margin: 15px 8px;
+  font-size: 14px;
 }
 
 article.tweet div {
@@ -42,17 +44,24 @@ article.tweet div {
 }
 
 article.tweet footer {
-  border-top: 1px solid #D0D0D0;
-  padding: 15px 5px;
+  border-top: 1px solid rgb(238, 238, 238);
+  padding: 3px 5px;
   overflow: auto;
 }
 
 article.tweet .post-date {
   float: left;
+  margin: 5px;
+  font-size: 12px;
+}
+
+article.tweet .post-date:hover {
+  cursor: default;
 }
 
 article.tweet:hover i {
   visibility: visible;
+  cursor: pointer;
 }
 
 article.tweet i {
