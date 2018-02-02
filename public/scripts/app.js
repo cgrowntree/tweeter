@@ -12,7 +12,7 @@ function createTweetElement(tweet) {
   let $handle = $('<span>').addClass('handle').text(tweet.user.handle);
   let $body = $('<div>').append($('<p>').text(tweet.content.text));
   let $footer = $('<footer>');
-  let $created_at = $('<span>').addClass('post-date').text(tweet.created_at);
+  let $created_at = $('<span>').addClass('post-date').text(moment(tweet.created_at).startOf('hour').fromNow());
   let $icon1 = $('<i>').addClass('fa fa-heart');
   let $icon2 = $('<i>').addClass('fa fa-retweet');
   let $icon3 = $('<i>').addClass('fa fa-flag');
