@@ -57,6 +57,10 @@ $(document).ready(function() {
         loadTweets();
         //clear the text box on post
         $("textarea").val("");
+        //reset counter on post
+        $(".counter").text("140");
+        //unselect text input on post
+        $("#tweetInput").prop("selected", false);
       });
     }
   });
@@ -70,7 +74,7 @@ $(document).ready(function() {
 //on button press toggle the compose tweet section and select textarea
 $(document).ready(function() {
   $(".compose").on("click", () => {
-    $(".new-tweet").slideToggle(250);
+    $(".new-tweet").slideToggle(500);
     $("#tweetInput").focus().select();
   });
 });
