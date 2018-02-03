@@ -10,6 +10,7 @@ section.new-tweet {
 section.new-tweet textarea {
   width: 100%;
   color: black;
+  margin-bottom: 5px;
 }
 
 section span.counter {
@@ -32,6 +33,7 @@ section.new-tweet h2:hover {
 
 section.new-tweet input {
   cursor: pointer;
+  background-color: white;
 }
 
 /* Adds red color to counter if is negative */
